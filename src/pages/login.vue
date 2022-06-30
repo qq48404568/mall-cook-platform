@@ -9,21 +9,70 @@
               :class="[active == tab.value ? 'tab-active' : '']"
               @click="active = tab.value">{{tab.label}}</li>
         </ul>
+
+        <!-- 登录 -->
+        <template v-if="active == 'login'">
+          <el-form :model="loginForm"
+                   label-width="0"
+                   ref="login">
+            <el-form-item prop="account"
+                          class="mb40"
+                          :verify="{ minLen: 8, maxLen: 16, typeOptions: ['字母|数字'] }">
+              <el-input v-model="loginForm.account"
+                        placeholder="请输入账户名"></el-input>
+              <el-form-item prop="password"
+                            class="mb70"
+                            :verify="{ passwordOptions: [6, 18, '字母|数字'] }">
+                <el-input v-model="loginForm.password"
+                          placeholder="输入密码登录"
+                          show-password></el-input>
+              </el-form-item>
+            </el-form-item>
+          </el-form>
+
+          <el-button class="w-100 h48 f-white bg-theme r3 f18 lb-4"
+                     type="primary"
+                     @click="login">登录</el-button>
+        </template>
       </div>
-      <div class="login-content-right"></div>
+      <div class="login-content-right">
+        <img class="w-100" src="../assets/image/logo.jpeg">
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { login } from '@/api/user'
 export default {
   data () {
     return {
       active: 'login',
+      loginForm: {
+        account: 'qq48404568',
+        password: 'haoxiongdi999'
+      },
+      registerForm: {
+        account: '',
+        password: '',
+        userName: ''
+      },
       tabs: [
         { label: '密码登录', value: 'login' },
         { label: '免费注册', value: 'register' }
       ]
+    }
+  },
+  methods: {
+    // 登录
+    login () {
+      console.log(this.$refs);
+      this.$refs["login"].validate(async (valid) => {
+        if (valid) {
+          let res = await login(this.loginForm)
+          console.log(res);
+        }
+      })
     }
   },
 }
@@ -35,14 +84,13 @@ export default {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: #bfa;
+  background: #f2f3f5;
   overflow: hidden;
 
   .login-content {
     display: flex;
     height: 500px;
     margin-top: 200px;
-    background: #ee3;
     .login-content-left {
       width: 550px;
       margin-right: 20px;

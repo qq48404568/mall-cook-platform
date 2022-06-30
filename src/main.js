@@ -4,6 +4,31 @@ import router from './router'
 import store from './store'
 import '@/scss/index.scss'
 
+
+/**
+ * Axios 捷径
+ */
+import createAxiosShortcut from 'axios-shortcut'
+import request from '@/utils/request'
+const axiosShortcut = createAxiosShortcut(request)
+for (let k in axiosShortcut) {
+  if (!Vue.prototype[`$${k}`]) {
+    Object.defineProperty(Vue.prototype, `$${k}`, {
+      value: axiosShortcut[k]
+    })
+  }
+}
+
+// Element UI
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+import ElementVerify from 'element-verify'
+
+Vue.use(ElementUI)
+Vue.use(ElementVerify)
+
+
 Vue.config.productionTip = false
 
 new Vue({
