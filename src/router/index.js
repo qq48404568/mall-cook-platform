@@ -12,7 +12,12 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () =>import('@/pages/login')
+    component: () => import('@/pages/login')
+  },
+  {
+    path: '/managet',
+    name: 'managet',
+    component: () => import('@/pages/managet')
   }
 ]
 

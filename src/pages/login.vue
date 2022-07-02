@@ -36,13 +36,15 @@
         </template>
       </div>
       <div class="login-content-right">
-        <img class="w-100" src="../assets/image/logo.jpeg">
+        <img class="w-100"
+             src="../assets/image/logo.jpeg">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import { login } from '@/api/user'
 export default {
   data () {
@@ -64,6 +66,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['setToken', 'setUserInfo', 'logout']),
     // 登录
     login () {
       console.log(this.$refs);
@@ -71,6 +74,22 @@ export default {
         if (valid) {
           let res = await login(this.loginForm)
           console.log(res);
+          if (res.status == '10000') {
+            this.$notify({
+              title: "登录成功",
+              message: "快去体验可视化给构建商城吧！",
+              type: "success"
+            });
+            this.setToken(res.token)
+            this.setUserInfo(res.userInfo)
+            this.$router.push({ name: 'managet' })
+          } else {
+            this.$notify({
+              title: '登录失败',
+              message: res.message,
+              type: 'warning'
+            })
+          }
         }
       })
     }
