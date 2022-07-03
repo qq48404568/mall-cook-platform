@@ -34,6 +34,35 @@
                      type="primary"
                      @click="login">登录</el-button>
         </template>
+
+        <!-- 注册 -->
+        <template v-if="active == 'register'">
+          <el-form :model="registerForm"
+                   ref="register"
+                   label-width="0">
+            <el-form-item prop="account"
+                          class="mb40"
+                          :verify="{ minLen: 8, maxLen: 16, typeOptions: ['字母|数字'] }">
+              <el-input v-model="registerForm.account"
+                        placeholder="请输入注册账户"></el-input>
+            </el-form-item>
+            <el-form-item prop="password"
+                          class="mb40"
+                          :verify="{ passwordOptions: [6, 18, '字母|数字'] }">
+              <el-input v-model="registerForm.password"
+                        show-password></el-input>
+            </el-form-item>
+            <el-form-item prop="userName"
+                          class="mb70"
+                          :verify="{ maxLen: 10 }">
+              <el-input v-model="registerForm.userName"
+                        placeholder="请输入用户名"></el-input>
+            </el-form-item>
+            <el-button class="w-100 h48 f-white bg-theme r3 f18 lb-4"
+                       type="primary"
+                       @click="register">注册</el-button>
+          </el-form>
+        </template>
       </div>
       <div class="login-content-right">
         <img class="w-100"
@@ -45,8 +74,11 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import { login } from '@/api/user'
+import { login, register } from '@/api/user'
 export default {
+  created () {
+    this.logout()
+  },
   data () {
     return {
       active: 'login',
@@ -68,7 +100,7 @@ export default {
   methods: {
     ...mapMutations(['setToken', 'setUserInfo', 'logout']),
     // 登录
-    login () {
+    async login () {
       console.log(this.$refs);
       this.$refs["login"].validate(async (valid) => {
         if (valid) {
@@ -92,12 +124,50 @@ export default {
           }
         }
       })
+    },
+    // 注册
+    register () {
+      this.$refs['register'].validate(async (vaild) => {
+        if (vaild) {
+          let res = await register(this.registerForm)
+          console.log(res);
+          if (res.status == '10000') {
+            this.$notify({
+              title: '注册成功',
+              message: '账户已注册成功，快去登录使用吧',
+              type: 'success'
+            })
+            this.active = "login"
+            setTimeout(() => {
+              this.$refs["login"].resetFields()
+            }, 0)
+          } else {
+            this.$notify({
+              title: '注册失败',
+              type: 'warning',
+              message: res.message
+            })
+          }
+        }
+      })
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+::v-deep .el-input__inner {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 16px;
+  border-bottom: solid 1px #dcdee0 !important;
+}
+
+::v-deep .el-input__icon {
+  font-size: 20px;
+}
+
 .login {
   display: flex;
   justify-content: center;
@@ -116,6 +186,11 @@ export default {
       border-radius: 6px;
       background: #fff;
       padding: 50px 56px 60px;
+      .tab {
+        font-size: 20px;
+        // color: $color-grey;
+        cursor: pointer;
+      }
       .tab-active {
         font-size: 24px;
         color: #323233;
