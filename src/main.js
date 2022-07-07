@@ -5,11 +5,18 @@ import store from './store'
 import '@/scss/index.scss'
 
 
+
 /**
  * Axios 捷径
  */
 import createAxiosShortcut from 'axios-shortcut'
+
+// require
 import request from '@/utils/request'
+
+// 全局注册组件
+// import '@/utils/globalRegister.js'
+
 const axiosShortcut = createAxiosShortcut(request)
 for (let k in axiosShortcut) {
   if (!Vue.prototype[`$${k}`]) {
