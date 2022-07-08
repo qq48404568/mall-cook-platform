@@ -4,7 +4,11 @@ import router from './router'
 import store from './store'
 import '@/scss/index.scss'
 
-
+import {
+  getWrapStyle,
+  getComponentStyle,
+  getMultiBackground
+} from '@/utils/style'
 
 /**
  * Axios 捷径
@@ -13,6 +17,10 @@ import createAxiosShortcut from 'axios-shortcut'
 
 // require
 import request from '@/utils/request'
+
+import _ from 'lodash'
+// import global from '@/config/global'
+Vue.prototype._= _
 
 // 全局注册组件
 // import '@/utils/globalRegister.js'
@@ -37,6 +45,11 @@ Vue.use(ElementVerify)
 
 
 Vue.config.productionTip = false
+
+Vue.prototype.$getWrapStyle = getWrapStyle
+Vue.prototype.$getComponentStyle = getComponentStyle
+Vue.prototype.$getMultiBackground = getMultiBackground
+
 
 new Vue({
   router,

@@ -27,4 +27,21 @@ export function getAuthUserInfo () {
   return userInfoStr ? JSON.parse(sessionStorage.getItem(UserInfoKey)) : null
 }
 
+export function removeAuthUserInfo(){
+  return sessionStorage.removeItem(UserInfoKey)
+}
+
+export function getProject(){
+  let str = localStorage.getItem(ProjectKey)
+  return str ? JSON.parse(str) : null
+}
+
+export function settingProject(project){
+  return localStorage.setItem(ProjectKey,JSON.stringify(project))
+}
+
+export function removeProject(){
+  return localStorage.removeItem(ProjectKey)
+}
+
 

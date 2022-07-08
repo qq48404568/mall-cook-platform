@@ -11,7 +11,8 @@ export default {
     userInfo:getAuthUserInfo()
   },
   getters:{
-
+    token:state => state.token,
+    userInfo:state => state.userInfo
   },
   mutations:{
     setToken(state,token){

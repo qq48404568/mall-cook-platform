@@ -4,7 +4,8 @@
     <div class="manage-head">
       <div class="manage-head-content">
         <git-control></git-control>
-        <el-button size="small f-white bg-theme" @click="create">立即创建</el-button>
+        <el-button size="small f-white bg-theme"
+                   @click="create">立即创建</el-button>
         <el-button size="small">退出</el-button>
       </div>
     </div>
@@ -13,7 +14,7 @@
          :key="index"
          class="manage-body">
       <h2 class="manage-body-title">
-        
+
       </h2>
     </div>
     <!-- 页尾 -->
@@ -58,8 +59,8 @@ export default {
     },
 
     // 创建商城
-    create(){
-      console.log(this.$refs);
+    create () {
+      this.$refs['create'].open()
     }
   },
 }

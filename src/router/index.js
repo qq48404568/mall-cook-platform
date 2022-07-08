@@ -18,6 +18,11 @@ const routes = [
     path: '/managet',
     name: 'managet',
     component: () => import('@/pages/managet')
+  },
+  {
+    path:'/mall',
+    name:'mall',
+    component:()=> import('@/pages/mall')
   }
 ]
 
