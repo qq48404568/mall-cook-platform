@@ -23,6 +23,11 @@ export default {
       state.project = project
       settingProject(state.project)
       state.curPage = state.project.pages.find(page => page.home)
+    },
+
+    // 设置首页为当前页
+    setHomePage (state, page) {
+      state.curPage = state.project.pages.find(page => page.home)
     }
   }
 }

@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import {cloneDeep} from 'lodash'
+// import {cloneDeep} from 'lodash'
 import { addProject } from '@/api/project'
 import { mapGetters, mapMutations } from 'vuex'
 import { rojectModel } from '@/config/project'
@@ -59,7 +59,7 @@ export default {
   data () {
     return {
       mallIndustryList,
-      show: true,
+      show: false,
       form: {
         type: 'mall',
       }
@@ -91,14 +91,14 @@ export default {
       mallTypeList.map((item) => map.set(item.type, item.logo))
 
       let project = {
-        ...cloneDeep(rojectModel),
+        ...this._.cloneDeep(rojectModel),
         ...this.form,
         ...{ userId: this.userInfo.userId, logo: map.get(this.form.type) },
       }
 
       let { status, id } = await addProject(project);
 
-      if(status == '10000'){
+      if (status == '10000') {
         project.id = id;
         this.setProject(project)
         this.$router.push({ name: "mall" });
@@ -108,5 +108,47 @@ export default {
 }
 </script>
 
-<style>
+
+<style lang="scss" scoped>
+input {
+  border: 0;
+  margin-bottom: 5px;
+}
+
+::v-deep .el-form-item {
+  padding-bottom: 5px;
+  border-bottom: solid 1px #e3e3e3;
+
+  .el-form-item__label {
+    text-align: left;
+  }
+
+  .el-form-item__error {
+    top: 47px;
+    left: -80px;
+  }
+}
+
+::v-deep .el-button--primary {
+  background: $color-theme !important;
+}
+
+::v-deep .el-select {
+  width: 100%;
+
+  input {
+    padding-left: 0;
+    border: 0;
+  }
+}
+
+::v-deep .el-input__inner {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.form-item-none {
+  border-color: transparent;
+}
 </style>

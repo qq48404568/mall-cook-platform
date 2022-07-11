@@ -1,426 +1,426 @@
 @font-face {
-    font-family: decorate;
-    src: url(./b.ttf) format("truetype"), url(./a.woff) format("woff"), url(./c.woff2) format("woff2");
+  font-family: decorate;
+  src: url(./b.ttf) format("truetype"), url(./a.woff) format("woff"), url(./c.woff2) format("woff2");
 }
 
 [class*="deco-icon-"],
 [class^="deco-icon-"] {
-    font-family: decorate !important;
-    display: block;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: decorate !important;
+  display: block;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .deco-icon-1-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-16-9:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-3-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-3-4:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-align-center:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-align-left:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-align-right:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-audio-player:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-audio-simple:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-audio-weixin:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-avatar-shape1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-avatar-shape2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-big-slide:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-big:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-btn-number:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-btn-percent:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-carousel:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-corner-round:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-corner-straight:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-3:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-4:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-5:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-6:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-7:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-coupon-8:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cube-custom:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cube-upto:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cube:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cuberow:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cuberow1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cuberow2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cubeto:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-cubeto1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-delete:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-drag-handler:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-edit:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-feature:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-fixed:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-float:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-font-bold:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-font-m:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-font-regular:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-font-s:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-font-x:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-hotarea:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-huadong:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-huanhang:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-hybrid:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-image-ad-normal:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-img-contain:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-img-cover:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-indicator-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-indicator-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-indicator-3:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-indicator-4:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line-dashed:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line-dotted:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line-no-padding:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line-padding:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line-solid:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-line:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-list:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-menu-fixed:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-menu-left:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-menu-normal:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-menu-top:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-nav-slide:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-neirong:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-progress-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-progress-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-scroll:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-fixed:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-normal:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-round:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-scroll:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-square:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-search-sticky:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shadow:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shop-info-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shop-info-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shop-info-3:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shop-info-4:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shop-info-5:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shopnote-hybrid:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-shopnote-waterfall:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-small-slide:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-small:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-social-fans:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-swipe:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-tabs-1:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-tabs-2:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-tabs-3:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-text-position-cover:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-text-position-follow:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-three:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-up2end:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-white:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-xianxiake:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-zhibo:before {
-    content: "";
+  content: "";
 }
 
 .deco-icon-zhuanlan:before {
-    content: "";
+  content: "";
 }

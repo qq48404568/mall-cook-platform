@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import '@/scss/index.scss'
 
+// 适配
+import '@/utils/adapter.js'
+
+
 import {
   getWrapStyle,
   getComponentStyle,
@@ -37,6 +41,7 @@ for (let k in axiosShortcut) {
 // Element UI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import '@/scss/element-#82AAF1/index.css'
 
 import ElementVerify from 'element-verify'
 

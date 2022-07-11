@@ -3,7 +3,6 @@ import store from '@/store'
 const TokenKey = 'token'
 const UserInfoKey = 'user-info'
 const ProjectKey = 'mall-project'
-
 // 获取token
 export function getAuthToken () {
   return sessionStorage.getItem(TokenKey)

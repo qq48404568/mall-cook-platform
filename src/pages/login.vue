@@ -188,7 +188,7 @@ export default {
       padding: 50px 56px 60px;
       .tab {
         font-size: 20px;
-        // color: $color-grey;
+        color: $color-grey;
         cursor: pointer;
       }
       .tab-active {
